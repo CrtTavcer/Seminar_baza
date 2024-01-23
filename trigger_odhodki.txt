@@ -1,0 +1,25 @@
+BEGIN
+    DECLARE datum DATE;
+    DECLARE user_balance DECIMAL(10, 2);
+    
+    SET datum = DATE_FORMAT(NOW(), '%Y-%m-01');
+    
+    IF NEW.ID_vrsta = 1 THEN
+        SELECT vsota_odhodki INTO user_balance
+        FROM bilanca
+        WHERE ID_uporabnika = NEW.ID_uporabnika
+        AND datum = datum;
+        
+        IF user_balance IS NOT NULL THEN
+            -- Update the existing balance for the current month
+            UPDATE bilanca
+            SET vsota_odhodki = vsota_odhodki + NEW.vsota
+            WHERE ID_uporabnika = NEW.ID_uporabnika
+            AND datum = datum;
+        ELSE
+            -- Insert a new balance for the next month
+            INSERT INTO bilanca (ID_uporabnika, datum, vsota_odhodki)
+            VALUES (NEW.ID_uporabnika, datum, NEW.vsota);
+        END IF;
+    END IF;
+END

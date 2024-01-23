@@ -1,0 +1,13 @@
+BEGIN
+    DECLARE bilanca_count INT;
+    
+    SELECT COUNT(*)
+    INTO bilanca_count
+    FROM ledger
+    WHERE ID_uporabnika = OLD.ID_uporabnika;
+    
+    IF bilanca_count > 0 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Cannot delete from uporabniki table because related records exist in the ledger table';
+    END IF;
+END

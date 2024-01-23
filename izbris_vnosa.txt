@@ -1,0 +1,24 @@
+BEGIN
+    DECLARE datum DATE;
+    DECLARE user_balance DECIMAL(10, 2);
+    
+    SET datum = DATE_FORMAT(NOW(), '%Y-%m-01');
+    
+    SELECT vsota_odhodki INTO user_balance
+    FROM bilanca
+    WHERE ID_uporabnika = OLD.ID_uporabnika
+    AND datum = datum;
+    
+    IF OLD.ID_vrsta = 1 THEN
+            UPDATE bilanca
+            SET vsota_odhodki = vsota_odhodki - OLD.vsota
+            WHERE ID_uporabnika = OLD.ID_uporabnika
+            AND datum = datum;
+    END IF;
+    IF OLD.ID_vrsta = 2 THEN
+            UPDATE bilanca
+            SET vsota_prihodki = vsota_prihodki - OLD.vsota
+            WHERE ID_uporabnika = OLD.ID_uporabnika
+            AND datum = datum;
+    END IF;
+END
