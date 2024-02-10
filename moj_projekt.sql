@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gostitelj: 127.0.0.1
--- Čas nastanka: 23. jan 2024 ob 14.31
+-- Čas nastanka: 10. feb 2024 ob 15.21
 -- Različica strežnika: 10.4.28-MariaDB
 -- Različica PHP: 8.2.4
 
@@ -40,9 +40,14 @@ CREATE TABLE `bilanca` (
 --
 
 INSERT INTO `bilanca` (`ID_bilanca`, `ID_uporabnika`, `vsota_prihodki`, `vsota_odhodki`, `datum`) VALUES
-(16, 18, 966.70, 962.54, '2024-01-01'),
-(17, 23, 1200.00, 1030.00, '2024-01-01'),
-(18, 24, 0.00, 15.00, '2024-01-01');
+(16, 18, 1019.69, 1245.70, '2024-01-01'),
+(17, 23, 1668.00, 1294.43, '2024-01-01'),
+(18, 24, 0.00, 15.00, '2024-01-01'),
+(19, 25, 100.00, 500.00, '2024-01-01'),
+(20, 26, 100.74, 100.00, '2024-02-01'),
+(21, 18, 40.99, 151.00, '2024-02-01'),
+(22, 18, 25.99, 101.00, '2024-03-15'),
+(23, 23, 468.00, 264.43, '2024-02-01');
 
 --
 -- Sprožilci `bilanca`
@@ -109,7 +114,68 @@ INSERT INTO `ledger` (`ID_ledger`, `ID_vrsta`, `ID_namen`, `ID_uporabnika`, `vso
 (91, 1, 1, 23, 100.00, '2024-01-20'),
 (92, 1, 1, 23, 10.00, '2024-01-20'),
 (93, 1, 1, 23, 10.00, '2024-01-20'),
-(94, 1, 1, 23, 10.00, '2024-01-20');
+(94, 1, 1, 23, 10.00, '2024-01-20'),
+(95, 1, 1, 25, 500.00, '2024-01-25'),
+(96, 2, 2, 25, 100.00, '2024-01-25'),
+(97, 1, 1, 18, 50.00, '2024-01-31'),
+(98, 1, 1, 26, 16.00, '2024-02-01'),
+(99, 1, 1, 18, 15.00, '2024-02-01'),
+(100, 1, 1, 18, 0.46, '2024-02-01'),
+(101, 1, 1, 18, 0.70, '2024-02-01'),
+(102, 1, 14, 18, 55.00, '2024-02-01'),
+(103, 1, 1, 26, 55.00, '2024-01-10'),
+(104, 1, 1, 18, 10.00, '2024-02-01'),
+(105, 1, 1, 18, 0.30, '2024-02-01'),
+(106, 1, 1, 18, 0.70, '2024-02-01'),
+(107, 2, 2, 18, 12.00, '2024-02-01'),
+(114, 1, 1, 18, 44.00, '2024-02-01'),
+(115, 1, 1, 18, 6.00, '2024-02-01'),
+(116, 2, 2, 18, 15.00, '2024-02-01'),
+(117, 2, 2, 18, 1.00, '2024-03-01'),
+(118, 1, 1, 23, 100.00, '2024-02-01'),
+(119, 2, 15, 23, 300.00, '2024-02-01'),
+(120, 1, 1, 23, 12.00, '2024-02-07'),
+(121, 1, 1, 23, 11.00, '2024-02-07'),
+(122, 1, 1, 23, 11.00, '2024-02-07'),
+(123, 2, 2, 23, 69.00, '2024-02-07'),
+(126, 2, 4, 23, 11.00, '2024-02-07'),
+(127, 2, 2, 23, 42.50, '2024-02-07'),
+(130, 2, 6, 23, 5.50, '2024-02-07'),
+(131, 1, 1, 23, 11.00, '2024-02-08'),
+(134, 1, 1, 23, 12.00, '2024-02-08'),
+(138, 2, 2, 23, 11.00, '2024-02-08'),
+(139, 1, 1, 23, 2.66, '2024-02-08'),
+(141, 1, 1, 23, 0.66, '2024-02-08'),
+(144, 2, 2, 23, 1.00, '2024-02-08'),
+(145, 1, 1, 23, 0.22, '2024-02-08'),
+(146, 2, 2, 23, 0.54, '2024-02-08'),
+(148, 1, 5, 23, 0.21, '2024-02-08'),
+(150, 2, 1, 23, 0.69, '2024-02-08'),
+(151, 1, 1, 23, 0.66, '2024-02-08'),
+(153, 2, 2, 23, 0.52, '2024-02-08'),
+(154, 1, 1, 23, 0.11, '2024-02-08'),
+(157, 1, 1, 18, 0.50, '2024-02-08'),
+(158, 2, 6, 18, 12.00, '2024-02-09'),
+(159, 2, 12, 18, 12.00, '2024-02-09'),
+(160, 1, 17, 18, 0.50, '2024-02-09'),
+(161, 1, 17, 26, 12.00, '2024-02-09'),
+(162, 2, 13, 26, 100.00, '2024-02-09'),
+(163, 2, 17, 23, 13.00, '2024-02-09'),
+(165, 1, 5, 23, 0.96, '2024-02-09'),
+(166, 1, 1, 26, 1.00, '2024-02-09'),
+(167, 1, 1, 23, 100.00, '2024-02-09'),
+(168, 1, 1, 18, 100.00, '2024-02-09'),
+(169, 1, 5, 26, 12.00, '2024-02-09'),
+(170, 1, 1, 26, 4.00, '2024-02-09'),
+(171, 2, 14, 26, 0.74, '2024-02-09'),
+(172, 1, 1, 23, 0.55, '2024-02-10'),
+(173, 2, 2, 18, 0.99, '2024-02-10'),
+(181, 2, 17, 23, 13.00, '2024-02-10'),
+(182, 2, 16, 23, 0.25, '2024-02-10'),
+(183, 1, 1, 23, 0.50, '2024-02-10'),
+(184, 1, 1, 23, 0.10, '2024-02-10'),
+(185, 1, 1, 23, 0.20, '2024-02-10'),
+(186, 1, 1, 23, 0.60, '2024-02-10');
 
 --
 -- Sprožilci `ledger`
@@ -152,7 +218,9 @@ CREATE TRIGGER `odhodki` AFTER INSERT ON `ledger` FOR EACH ROW BEGIN
         SELECT vsota_odhodki INTO user_balance
         FROM bilanca
         WHERE ID_uporabnika = NEW.ID_uporabnika
-        AND datum = datum;
+        AND datum = datum
+        ORDER BY datum DESC, ID_bilanca DESC -- Order by date and an ID (assuming ID_bilanca is an auto-incremented column)
+        LIMIT 1;
         
         IF user_balance IS NOT NULL THEN
             -- Update the existing balance for the current month
@@ -174,14 +242,15 @@ CREATE TRIGGER `prihodki` AFTER INSERT ON `ledger` FOR EACH ROW BEGIN
     DECLARE datum DATE;
     DECLARE user_balance DECIMAL(10, 2);
     
-    #SET datum = DATE_FORMAT(NOW(), '%Y-%m-01');
     SET datum = DATE_FORMAT(NEW.datum, '%Y-%m-01');
     
     IF NEW.ID_vrsta = 2 THEN
         SELECT vsota_prihodki INTO user_balance
         FROM bilanca
         WHERE ID_uporabnika = NEW.ID_uporabnika
-        AND datum = datum;
+        AND datum = datum
+        ORDER BY datum DESC, ID_bilanca DESC -- Order by date and an ID (assuming ID_bilanca is an auto-incremented column)
+        LIMIT 1;
         
         IF user_balance IS NOT NULL THEN
             -- Update the existing balance for the current month
@@ -251,13 +320,15 @@ CREATE TABLE `uporabniki` (
 --
 
 INSERT INTO `uporabniki` (`ID`, `ime`, `priimek`, `vzdevek`, `geslo`, `email`) VALUES
-(18, 'Marjan', 'Klobasa', 'mare', '$2y$10$Y3VKcTP5vAKy7fz1Z9CuNOx.opAaLRYvms11HvnHl4K9FcqX9jl62', 'mare@mare.com'),
+(18, 'mare', 'moron', 'mare', '$2y$10$Bg9rQhIbYgRESpi3ajTPwuS73GM95O18MhScl2SGXBSsVmM.pK/ja', 'MM@m.com'),
 (19, 'Maks', 'Rog', 'maks', '$2y$10$kJxA6RfE/tQa32FZWpkTHuek1shyr0M4d9wxOosF3PIniRL7ZDET6', 'maks@email.com'),
 (20, 'Jure', 'Goba', 'jure', '$2y$10$lmNTzHy/yss9RvPkPfI8J.bLEnGRcPhCke3OBHWCJY3exqKKcJqeG', 'JG@g.com'),
 (21, 'Jure', 'Goba', 'jure1', '$2y$10$nuCS9s.ej8YpyUXNbFIzJu5Z6cmK5G5StFh2l7QZVZbiRM3Rf3SrS', 'JG@g.com'),
 (22, 'Maja', 'Snoj', 'maja', '$2y$10$jk3/IgrZGZ5aK7mOwtfR.OK92Lg88UXTC5arlHrPJiLL68Cqccduq', 'ms@g.com'),
-(23, 'NinaNana', 'Snoj', 'nina', '$2y$10$rkew58qykRPb3ZTeMWLsqeZnm5mir1VehgyXlIjkmpV8M7wPC7Juq', 'nina@nana.com'),
-(24, 'm', 'm', 'mihec', '$2y$10$LidnQl3HLOzVP1zPmFkBEux4XD4JAStY848Vh8rqtPZO5eRRdYvVm', 'MM@m.com');
+(23, 'nina', 'nina', 'nina', '$2y$10$CrRhh0Ro9oNdbIicdj4RQOEuhSOEqJQk4AMMoO/oRba5csIUTLdmG', 'n@n.com'),
+(24, 'm', 'm', 'mihec', '$2y$10$LidnQl3HLOzVP1zPmFkBEux4XD4JAStY848Vh8rqtPZO5eRRdYvVm', 'MM@m.com'),
+(25, 'p', 'p', 'petra', '$2y$10$JdfwxFHZ3.xhG32IV2u8b.jzydDd4VfFTICyrZumwdSQPQ.RQpfWC', 'p@p.p'),
+(26, 'zala', 'z', 'zala', '$2y$10$YxS1jVsM5yVDEuFWJa40dOYZr5L46f5Tyz8iKUklve6iTVLWEtg3W', 'z@z.z');
 
 -- --------------------------------------------------------
 
@@ -326,13 +397,13 @@ ALTER TABLE `vrsta`
 -- AUTO_INCREMENT tabele `bilanca`
 --
 ALTER TABLE `bilanca`
-  MODIFY `ID_bilanca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `ID_bilanca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT tabele `ledger`
 --
 ALTER TABLE `ledger`
-  MODIFY `ID_ledger` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `ID_ledger` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=190;
 
 --
 -- AUTO_INCREMENT tabele `namen`
@@ -344,7 +415,7 @@ ALTER TABLE `namen`
 -- AUTO_INCREMENT tabele `uporabniki`
 --
 ALTER TABLE `uporabniki`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT tabele `vrsta`
